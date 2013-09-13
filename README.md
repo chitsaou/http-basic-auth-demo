@@ -77,7 +77,7 @@ Actual Results:
 * The session of HTTP Basic Auth seems to be host-wide. *Explanation Required*
 * If there are multiple applications mounted on the same host and authorized with HTTP Basic Auth, the credentials may leak to other applications, since the credentials are not encrypted, only encoded with Base64.
 
-## Explanation Requested
+## Explanation Required!
 
 I didn't read the whole [RFC 2617 - HTTP Authentication: Basic and Digest Access Authentication](http://tools.ietf.org/html/rfc2617). If you know more about the behaviors I describe above, please tell me.
 
