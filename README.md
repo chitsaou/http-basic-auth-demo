@@ -28,15 +28,15 @@ All the experiments the following preparation steps:
 
 Steps:
 
-* Access `/protected/a1`, enter username `abc` and password `a1`.
-* Access `/protected/b`.
+* Access `/a1`, enter username `abc` and password `a1`.
+* Access `/b`.
 
 Expected Results:
 
 * In the console, it should print:
 
-    Auth failed while accessing /protected/b.
-    No Credentials
+        Auth failed while accessing /b.
+        No Credentials
 
 * In the request entry in Network record, there should be no `Authenticate` header.
 
@@ -44,8 +44,8 @@ Actual Results:
 
 * In the console, it prints:
 
-    Auth failed while accessing /protected/b.
-    Credentials: ["abc", "a1"]
+        Auth failed while accessing /b.
+        Credentials: ["abc", "a1"]
 
 * In the request entry in Network record, the `Authenticate` header exists, with value `Basic YWJjOmEx`, which, after decoded with base64, equals to `abc:a1`.
 
@@ -53,9 +53,9 @@ Actual Results:
 
 Steps:
 
-* Access `/protected/a1`, enter username `abc` and password `a1`.
-* Access `/protected/a2`, enter username `abc` and password `a2`.
-* Access `/protected/a1`.
+* Access `/a1`, enter username `abc` and password `a1`.
+* Access `/a2`, enter username `abc` and password `a2`.
+* Access `/a1`.
 
 Expected Results:
 
@@ -66,8 +66,8 @@ Actual Results:
 
 * In the console, it prints:
 
-    Auth failed while accessing /protected/a1.
-    Credentials: ["abc", "a2"]
+        Auth failed while accessing /a1.
+        Credentials: ["abc", "a2"]
 
 * In the request entry in Network record, the `Authenticate` header exists, with value `Basic YWJjOmEy`, which, after decoded with base64, equals to `abc:a2`.
 
