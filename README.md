@@ -17,7 +17,7 @@ Requires Ruby >= 1.9.3, and Sinatra.
 
 ## Experiments
 
-All the experiments the following preparation steps:
+Every experiment requires the following preparation steps:
 
 1. Run the Sinatra App with `rackup`
 * keep the console open to see the output from logger (request path, wrong credentails when auth failed etc.)
@@ -28,7 +28,7 @@ All the experiments the following preparation steps:
 
 Steps:
 
-* Access `/a1`, enter username `abc` and password `a1`.
+1. Access `/a1`, enter username `abc` and password `a1`.
 * Access `/b`.
 
 Expected Results:
@@ -49,11 +49,11 @@ Actual Results:
 
 * In the request entry in Network record, the `Authenticate` header exists, with value `Basic YWJjOmEx`, which, after decoded with base64, equals to `abc:a1`.
 
-### 2) Always Authenticat with the Last-Used Credentials
+### 2) Always Authenticates with the Last-Used Credentials
 
 Steps:
 
-* Access `/a1`, enter username `abc` and password `a1`.
+1. Access `/a1`, enter username `abc` and password `a1`.
 * Access `/a2`, enter username `abc` and password `a2`.
 * Access `/a1`.
 
